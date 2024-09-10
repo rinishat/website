@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        body{
+            height:100vh;
+            width:100vw;
+            background-color:#ffff;
+            display:flex;
+            flex-direction:column;
+            justify-content:start;
+            align-items:center;
+        }
+        .section1{
+            width:70%;
+            height:12rem;
+            background: #000046;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+box-shadow:
+  5.6px 2.4px 5.3px rgba(0, 0, 0, 0.052),
+  18.8px 8px 17.9px rgba(0, 0, 0, 0.077),
+  84px 36px 80px rgba(0, 0, 0, 0.13)
+;
+
+
+
+            display:flex;
+            flex-direction:row;
+            justify-content:center;
+            align-items:center;
+
+        }
+        .profile-img-section{
+            width:40%;
+            height:20%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            
+        }
+        .profile-data{
+            width:40%;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:flex-start;
+        }
+        .profile-img{
+            width:8rem;
+            height:8rem;
+            border-radius: 55%;
+        }
+        .section2{
+            width:70%;
+            height:12rem;
+    
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:start;
+
+        }
+        .section3{
+            width:70%;
+            height:20rem;
+            
+            display:flex;
+           
+            flex-direction:column;
+            justify-content:center;
+            align-items:start;
+
+        }
+        .section4{
+            width:70%;
+            height:15rem;
+           
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:start;
+
+        }
+        .section-title{
+            /* color:#135ea4; */
+            font-width:bold;
+        }
+        .ed-title{
+            width:100%;
+            border:1px solid;
+            border-collapse:collapse;
+        }
+        th,td{
+            padding:1rem;
+            border:1px solid gray;
+        }
+        .companies{
+            font-weight:bold;
+            color:rgb(0, 0, 0);
+        }
+        .section1 h1,h3{
+            color: rgb(255, 255, 255);
+        }
+        .color-primary{
+            color:#000046;
+        }
+        .section5{
+            width:70%;
+            height:15rem;
+           
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:start;
+
+        }
+        li{
+            list-style:square; 
+            margin-left:2rem ;
+        }
+        .section6{
+            width:70%;
+            height:100px;
+            display:flex;
+            flex-direction:row;
+            justify-content:center;
+            align-items:center;
+            padding-left:10px;
+            background-color: #426fe9;
+            gap:20px;
+
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="section1">
+        <div class="profile-img-section">
+            <img src="./assets/360_F_562993122_e7pGkeY8yMfXJcRmclsoIjtOoVDDgIlh.jpg" class="profile-img" alt="dog">
+        </div>
+        <div class="profile-data">
+            <h1>Rinisha Jesline T</h1>
+            <h3>rinishajesline@gmail.com</h3>
+
+        </div>
+    </div>
+    <div class="section2">
+    <h2 class="section-title color-primary"><b>Objective</b></h2>
+    <p> With experience in web development and data analysis, my focus has been on building efficient and user-friendly solutions for both frontend and backend tasks.</p>
+    </div>
+    <div class="section3">
+        <h2 class="section-title color-primary">Education</h2>
+        <table class="ed-title">
+            <tr>
+                <th>Degree</th>
+                <th>Campus</th>
+                <th>Score</th>
+            </tr>
+            <tr>
+                <td>degree 1</td>
+                <td>School</td>
+                <td>92%</td>
+            </tr>
+            <tr>
+                <td>degree 2</td>
+                <td>School</td>
+                <td>97%</td>
+            </tr>
+            <tr>
+                <td>degree 3</td>
+                <td>School</td>
+                <td>93%</td>
+            </tr>
+
+        </table>
+       
+    </div>
+    <div class="section4">
+        <h1 class="section-title color-primary">Internship</h1>                                                                                                                                      
+        <p>
+            <span class="companies">WEB DEVELOPER</span>
+            My role is to design, build, and maintain websites and web applications that meet the unique needs of our clients. 
+
+        </p>
+        <br>
+        <p>
+            <span class="companies">DATA ANALYST</span>
+            Data analysts work closely with stakeholders to understand their objectives and translate data findings into actionable recommendations.
+        </p>
+        <br>
+
+
+
+    </div>
+    <div class="section5">
+        <h2 class="section-title color-primary">Skills</h2>
+    <ul>
+        <li>MERN</li>
+        <li>AWS</li>
+        <li>Devops</li>
+        
+    </ul>
+    </div>
+    <div class ="section6">
+        
+        <a href="tel:+91 7540017432" class="icons"target="_blank">
+        <i class="fa-solid fa-phone"> </i></a>
+    
+        <a href="mailto:rinishajesline@gmail.com" class="icons" target="_blank">
+        <i class="fa-regular fa-envelope"></i></a>
+         
+        <a href="www.linkedin.com/in/rinisha-jesline">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+       
+
+
+        <!-- <i class="fa-brands fa-linkedin"></i> -->
+
+
+    </div>
+
+</body>
+</html>
