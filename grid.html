@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+</head>
+<style>
+    .container{
+        height:100%;
+        width:100%;
+        display:grid;
+        grid-template-rows:300px 300px 300px;
+        grid-template-columns:repeat(3,auto);
+        gap:1%;
+    }
+
+    .orange{
+        background-color:orange;
+        grid-row: 2/3;
+        grid-column: 2/3;
+       
+    }
+    .red{
+        background-color:red;
+        grid-row: 3/4;
+        grid-column: -2/-1;
+       
+
+    }
+    .purple{
+        background-color:purple;
+       
+        
+    }
+    @media only screen and (max-width:600px){
+        .red{
+            background-color:rgb(242, 134, 112);
+        }
+        .orange{
+            background-color: rgb(219, 192, 142);
+        }
+        .purple{
+            background-color: rgb(175, 82, 229);
+        }
+    }
+    @keyframes myanimation{
+        0%{
+            transform:translateX(-100%);
+            
+        }
+        50%{
+            transform:translateX(0%);
+            
+        }
+        100%{
+            transform:translateX(100%);
+           
+        }
+    }
+    .purple{
+        animation: 2s myanimation ease-in ;
+    }
+    .orange{
+        animation: 2s myanimation ease-in ;
+    }
+    .red{
+        animation: 2s myanimation ease-in ;
+    }
+    .purple:hover{
+        background-color: pink;
+        transition :0.6s background-color ease-in;
+
+    }
+    .orange:hover{
+        background-color: rgb(68, 208, 171);
+        transition :0.6s background-color ease-in;
+
+    }
+    .red:hover{
+        background-color: rgb(149, 10, 105);
+        transition :0.6s background-color ease-in;
+
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="box orange"></div>
+        <div class="box red"></div>
+        <div class="box purple"></div>
+    </div>
+
+    
+    
+</body>
+</html>

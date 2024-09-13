@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body{
+            display: flex;
+            height:100px;
+            justify-content: center;
+            align-item:center;
+        }
+        .container{
+            display:flex;
+            gap:90px;
+            border-radius:2px;
+            border:1px solid black;
+            border-collapse:collapse;
+            width:200px;
+            background-color:antiquewhite;
+
+        }
+        .login-form{
+            display:flex;
+            flex-direction: column;
+            gap:10px;
+            margin-left:auto;
+            margin-right: auto;
+        }
+        .submit-btn{
+            background-color: aquamarine;
+            width:100px;
+            justify-content:center;
+            align-item:center;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+    <form class="login-form" onsubmit="formdata(e)">
+        <input type="text" name="" id="name" placeholder="Name"/>
+        <input type="email" name="" id="email" placeholder="Email"/>
+        <input type="number" name="" id="number" placeholder="Number"/>
+        <input type="password" name="" id="password" placeholder="Password"/>
+        <button type="submit" class="submit-btn">submit</button>
+    </form>
+</div>
+    
+</body>
+<script>
+    const name=document.getElementById("name").value
+    let email=document.getElementById("email").value
+    let number=document.getElementById("number").value
+    let password=document.getElementById("password").value
+    function formdata(e){
+        e.preventDefault();
+        console.log(name+" "+email+" "+number+" "+password)
+    }
+</script>
+</html>
