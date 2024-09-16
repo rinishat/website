@@ -1,61 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
+    <title>Register Form</title>
     <style>
-        body{
+        body {
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            margin: 0px;
             display: flex;
-            height:100px;
             justify-content: center;
-            align-item:center;
-        }
-        .container{
-            display:flex;
-            gap:90px;
-            border-radius:2px;
-            border:1px solid black;
-            border-collapse:collapse;
-            width:200px;
-            background-color:antiquewhite;
+            align-items: center;
+            /* background-color: #fff; */
+            background: #b92b27;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #1565C0, #b92b27);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #1565C0, #b92b27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 
         }
-        .login-form{
-            display:flex;
-            flex-direction: column;
-            gap:10px;
-            margin-left:auto;
-            margin-right: auto;
+
+        .login-container {
+            background-color: #d0cbd1;
+            border-radius: 10px;
+            padding:35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba( 255, 255, 255, 0.25 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 3.5px );
+            -webkit-backdrop-filter: blur( 3.5px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+            /* box-shadow: 
+                0px 0.7px 1.9px rgba(0, 0, 0, 0.036),
+                0px 1.6px 4.3px rgba(0, 0, 0, 0.052),
+                0px 2.8px 7.7px rgba(0, 0, 0, 0.064),
+                0px 4.7px 12.8px rgba(0, 0, 0, 0.076),
+                0px 7.7px 21.2px rgba(0, 0, 0, 0.088),
+                0px 13.4px 37px rgba(0, 0, 0, 0.104),
+                0px 29px 80px rgba(0, 0, 0, 0.14);*/
         }
-        .submit-btn{
-            background-color: aquamarine;
-            width:100px;
-            justify-content:center;
-            align-item:center;
+
+        .login-form {
+            width: 90%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.7rem;
+
+        }
+
+        input,
+        button {
+            padding: 1rem;
+            width: 100%;
+            font-weight: bold;
+            border: none;
+            border-bottom: 5px solid transparent;
+            background-color: #b1afaf;
+        }
+
+        input:focus {
+            border-bottom: 1px ;
+           
+        }
+
+        .submit-btn {
+            background: #b92b27;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #1565C0, #b92b27);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #1565C0, #b92b27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+            width: 100%;
+            color: #f0f0f0;
         }
     </style>
+
 </head>
+
 <body>
+
     <div class="login-container">
-    <form class="login-form" onsubmit="formdata(e)">
-        <input type="text" name="" id="name" placeholder="Name"/>
-        <input type="email" name="" id="email" placeholder="Email"/>
-        <input type="number" name="" id="number" placeholder="Number"/>
-        <input type="password" name="" id="password" placeholder="Password"/>
-        <button type="submit" class="submit-btn">submit</button>
-    </form>
-</div>
-    
+
+        <form class="login-form" onsubmit="formdata(event)">
+           
+            <input type="text" name="name" id="name" placeholder="Name">
+            <input type="email" name="" id="email" placeholder="Email">
+            <input type="number" name="" id="number" placeholder="Phone">
+            <input type="number" name="" id="age" placeholder="age">
+            <input type="password" name="" id="password" placeholder="Password">
+            <button type="submit" class="submit-btn">submit</button>
+            
+    </div>
 </body>
 <script>
-    const name=document.getElementById("name").value
-    let email=document.getElementById("email").value
-    let number=document.getElementById("number").value
-    let password=document.getElementById("password").value
-    function formdata(e){
+    function formdata(e) {
         e.preventDefault();
-        console.log(name+" "+email+" "+number+" "+password)
+        let name = document.getElementById("name").value
+        let email = document.getElementById("email").value
+        let number = document.getElementById("number").value
+        let age = document.getElementById("age").value
+        let password = document.getElementById("password").value
+        if(name!=="" && email!=="" && number!==0 && password!=="" && age!==0){
+            if(name==="rini" || email==="a@a.a"){
+                console.log("username/email already exists!")
+            }
+            else{
+                console.log("Success")
+            }
+            }else{
+                console.log("empty field not allowed")
+        }
+        
+       // console.log(name)
+        // document.write(name)
+        const data = {
+            username: name,
+            useremail: email,
+            userphone: number,
+            userpassword: password,
+            usertype:age>=18?"Major":"Minor"
+        }
+        const { username, useremail, userphone, userpassword,usertype } = data
+        console.log(usertype)
     }
+    let data1 = [1, 2, 3, 4]
+    let data2 = ['a', 'b', 'c', 'd']
+    let data3 = [...data1, false, ...data2]
+    console.log(data3)
 </script>
+
 </html>
